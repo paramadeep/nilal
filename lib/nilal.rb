@@ -1,6 +1,7 @@
 require 'capybara'
 require 'nilal/chunky'
 require 'nilal/assert'
+
 module Nilal
   def capture (element,file_name)
     x = element.native.location.x
@@ -32,4 +33,5 @@ module Nilal
     FileUtils.mkdir_p folder unless File.exists? folder
     FileUtils.touch "#{folder}/#{file}"
   end
+  include AssertNilal
 end

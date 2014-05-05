@@ -1,4 +1,3 @@
-nilal_rb
-========
+# Nilal
 
-Image Comparison at element level (Capybara)
+Captures images  of a particular web element and assert it against 
