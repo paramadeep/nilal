@@ -26,7 +26,7 @@ module Nilal
          evt.initEvent('CatchNilal', true, false); 
          nilal_element.dispatchEvent(evt); "
       script.delete!("\n")
-    page.execute_script(script)
+    Capybara.page.execute_script(script)
   end
 
   def touch_file (folder,file)

@@ -49,7 +49,6 @@ firefox_profile.add_extension File.join(Gem::Specification.find_by_name("nilal")
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => firefox_profile)
 end
-Capybara.current_session.driver.browser.capabilities.firefox_profile = firefox_profile
 ```
 #### Generating expected reference image
 1. Create a folder under 'feature' called 'images'.

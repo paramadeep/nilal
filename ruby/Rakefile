@@ -1,0 +1,19 @@
+require 'rake/packagetask'
+require 'rubygems/tasks'
+
+Gem::Tasks.new(
+  :build => {:gem => true},
+  :sign => {:checksum => true, :pgp => true}
+)
+
+desc "Make firefox extension"
+task :fire do
+  directory = '../firefox_driver/'
+  zipfile_name = 'lib/nilal/nilal.xpi'
+  require 'zip'
+  Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+    Dir[File.join(directory, '**', '**')].each do |file|
+      zipfile.add(file.sub(directory, ''), file)
+    end
+  end
+end
