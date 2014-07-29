@@ -52,3 +52,12 @@ end
 2. First time, run your test without the reference image, test would fail, yet image of the expected element would be captured in 'tmp/capybara' folder.
 3. Copy the image into your 'feature/images' folder. Commit it as part of your test source code.
 4. Done. Now your tests will run, anywhere your ode is available. 
+
+
+##ToDo
+1. Java Api - for assertion 
+2. .net Api - for assertion
+3. Chrome extension to capture image
+4. IE extension to capture image
+
+
