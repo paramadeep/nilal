@@ -31,7 +31,7 @@ There are lot of tools out there to do visual regression, then why a yet another
 ## Usage
 ```ruby
 #Gemfile
-gem 'nilal', '~> 0.0.1'
+gem 'nilal'
 ```
 ###Cucumber
 
