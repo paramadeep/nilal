@@ -1,5 +1,5 @@
 require 'chunky_png'
-  
+
 class Chunk
   def compare actual_file,expexcted_file,diff_file
     images = [
@@ -20,12 +20,15 @@ class Chunk
     images.last.save(diff_file)
     diff == 0
   end
-  
+
+  def compare_image file_name
+  end
+
   private
   def r (x)
     ChunkyPNG::Color.r x
   end
-  
+
   def g (x) 
     ChunkyPNG::Color.g x
   end
@@ -33,7 +36,7 @@ class Chunk
   def b (x)
     ChunkyPNG::Color.b x
   end
-  
+
   def rgb (r1,g1,b1) 
     ChunkyPNG::Color.rgb r1,g1,b1
   end
