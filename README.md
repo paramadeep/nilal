@@ -1,7 +1,7 @@
 # Nilal
 
 [![Dependency Status](https://gemnasium.com/paramadeep/pageify.svg)](https://gemnasium.com/paramadeep/pageify) 
-[![Build Status](https://travis-ci.org/paramadeep/nilal_rb.svg?branch=master)](https://travis-ci.org/paramadeep/nilal_rb)
+[![Build Status](https://travis-ci.org/paramadeep/nilal.svg?branch=master)](https://travis-ci.org/paramadeep/nilal)
 
 Captures images  of a particular web element and assert it against the expected image, and all you have to learn extra, is a single assert statement. Thus making it the simplest yet powerful visual regression testing tools.
 

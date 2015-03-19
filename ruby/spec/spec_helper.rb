@@ -19,4 +19,5 @@ end
 RSpec.configure do |config|
   config.include Nilal::Capybara
   config.include Capybara::DSL
+  config.expect_with(:rspec) { |c| c.syntax = :should }
 end
