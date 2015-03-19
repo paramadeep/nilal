@@ -7,4 +7,5 @@ rvm:
   - jruby-19mode
 script:
   - cd ruby
+  - bundle install
   - bundle exec rake spec
