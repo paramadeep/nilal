@@ -18,5 +18,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubygems-tasks', '~> 0.2.4'
   s.add_development_dependency 'rubyzip'
   s.add_development_dependency 'pry'
-
 end

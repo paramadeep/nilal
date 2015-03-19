@@ -1,16 +1,23 @@
-require 'chunky'
-require 'firefox_driver'
+require_relative 'chunky'
+require_relative 'firefox_driver'
 
-module Capybara
-  extend RSpec::Matchers::DSL
+module Nilal
+  module Capybara
+    extend RSpec::Matchers::DSL
 
-  matcher :match_image do |file_name|
-    match_for_should do |node| 
-      FirefoxDriver.capture node,text
-      actual_file = "#{Dir.pwd}/features/images/#{file_name}.png"
-      expexcted_file = "#{Capybara.save_and_open_page_path}/#{file_name}.png"
-      diff_file = "#{Capybara.save_and_open_page_path}/#{file_name}_diff.png"
-      Chunk.new.compare actual_file,expexcted_file,diff_file
+    matcher :match_image do |expexcted_file|
+      expexcted_file = File.absolute_path expexcted_file
+      actual_file = File.absolute_path "tmp/app_#{File.basename(expexcted_file)}"
+      diff_file = File.absolute_path "tmp/app_diff_#{File.basename(expexcted_file)}"
+      FileUtils.touch actual_file
+      match_for_should do |node| 
+        FirefoxDriver.capture node,actual_file
+        Chunk.matches? actual_file,expexcted_file,diff_file
+      end
+      match_for_should_not do |node| 
+        FirefoxDriver.capture node,actual_file
+        !Chunk.matches? actual_file,expexcted_file,diff_file
+      end
     end
   end
 end
