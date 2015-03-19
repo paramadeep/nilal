@@ -1,4 +1,5 @@
 require 'rake/packagetask'
+require 'rspec/core/rake_task'
 require 'rubygems/tasks'
 
 Gem::Tasks.new(
@@ -17,3 +18,6 @@ task :fire do
     end
   end
 end
+
+RSpec::Core::RakeTask.new(:spec)
+task :default => :spec

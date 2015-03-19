@@ -38,7 +38,7 @@ gem 'nilal'
 ```ruby
 # In env.rb
 require 'nilal'
-include Nilal
+World(Nilal::Capybara)
 
 firefox_profile = Selenium::WebDriver::Firefox::Profile.new
 firefox_profile.add_extension File.join(Gem::Specification.find_by_name("nilal").gem_dir,"/lib/nilal/nilal.xpi")
@@ -51,7 +51,7 @@ end
 1. Create a folder under 'feature' called 'images'.
 2. First time, run your test without the reference image, test would fail, yet image of the expected element would be captured in 'tmp/capybara' folder.
 3. Copy the image into your 'feature/images' folder. Commit it as part of your test source code.
-4. Done. Now your tests will run, anywhere your ode is available. 
+4. Done. Now your tests will run, anywhere your code is available. 
 
 
 ##ToDo

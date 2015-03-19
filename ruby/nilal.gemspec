@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'nilal'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2015-03-15'
   s.summary     = "Image Capturing and assertion at element level"
   s.description = "Image Capturing and assertion at element level, all you need is a single assert statement"

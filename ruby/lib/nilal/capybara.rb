@@ -1,5 +1,7 @@
 require_relative 'chunky'
 require_relative 'firefox_driver'
+require 'capybara'
+require 'capybara/rspec'
 
 module Nilal
   module Capybara
